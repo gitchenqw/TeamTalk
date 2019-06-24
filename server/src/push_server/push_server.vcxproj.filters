@@ -13,6 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\bufferloop">
+      <UniqueIdentifier>{c9f0f532-4573-4ec3-a064-8670175260e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\sigslot">
+      <UniqueIdentifier>{942ce659-b3dc-4d76-8e11-21d5baae312f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\thread">
+      <UniqueIdentifier>{7f4bcb42-198c-468e-a313-f1901a74d7c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\timer">
+      <UniqueIdentifier>{303e3212-294b-44ba-81fb-76bfbf5f021b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\type">
+      <UniqueIdentifier>{63fc2e56-9d06-4a17-a014-066536c12412}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\socket">
+      <UniqueIdentifier>{3e2ab7df-c381-4205-a9e3-fa13665e49c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\socket">
+      <UniqueIdentifier>{1b69131a-3551-4396-a36a-b78829c74d8c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="apns_client.h">
@@ -60,6 +81,60 @@
     <ClInclude Include="session_manager.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="bufferloop\buffer_loop.hpp">
+      <Filter>头文件\bufferloop</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\base_handler.hpp">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\base_io_stream.h">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\base_msg.h">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\base_socket.hpp">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\base_thread.hpp">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\epoll_io_loop.h">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\io_loop.h">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\socket_io.h">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\socket_io_define.h">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\ssl_client_async.h">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\tcp_client_async.h">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\tcp_server.h">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="socket\tcp_session_async.h">
+      <Filter>头文件\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="type\base_type.h">
+      <Filter>头文件\type</Filter>
+    </ClInclude>
+    <ClInclude Include="timer\Timer.hpp">
+      <Filter>头文件\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="thread\base_thread.hpp">
+      <Filter>头文件\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="sigslot\sigslot.h">
+      <Filter>头文件\sigslot</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="apns_client.cpp">
@@ -103,6 +178,27 @@
     </ClCompile>
     <ClCompile Include="session_manager.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="socket\base_io_stream.cpp">
+      <Filter>源文件\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="socket\epoll_io_loop.cpp">
+      <Filter>源文件\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="socket\io_loop.cpp">
+      <Filter>源文件\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="socket\ssl_client_async.cpp">
+      <Filter>源文件\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="socket\tcp_client_async.cpp">
+      <Filter>源文件\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="socket\tcp_server.cpp">
+      <Filter>源文件\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="socket\tcp_session_async.cpp">
+      <Filter>源文件\socket</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

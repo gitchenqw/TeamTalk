@@ -115,6 +115,7 @@
     <ClInclude Include="apns_client_handler.h" />
     <ClInclude Include="apns_feedback_handler.h" />
     <ClInclude Include="apns_msg.h" />
+    <ClInclude Include="bufferloop\buffer_loop.hpp" />
     <ClInclude Include="byte_stream.h" />
     <ClInclude Include="ConfigFileReader.h" />
     <ClInclude Include="jsonxx.h" />
@@ -126,6 +127,23 @@
     <ClInclude Include="push_session.h" />
     <ClInclude Include="push_session_handler.h" />
     <ClInclude Include="session_manager.h" />
+    <ClInclude Include="sigslot\sigslot.h" />
+    <ClInclude Include="socket\base_handler.hpp" />
+    <ClInclude Include="socket\base_io_stream.h" />
+    <ClInclude Include="socket\base_msg.h" />
+    <ClInclude Include="socket\base_socket.hpp" />
+    <ClInclude Include="socket\base_thread.hpp" />
+    <ClInclude Include="socket\epoll_io_loop.h" />
+    <ClInclude Include="socket\io_loop.h" />
+    <ClInclude Include="socket\socket_io.h" />
+    <ClInclude Include="socket\socket_io_define.h" />
+    <ClInclude Include="socket\ssl_client_async.h" />
+    <ClInclude Include="socket\tcp_client_async.h" />
+    <ClInclude Include="socket\tcp_server.h" />
+    <ClInclude Include="socket\tcp_session_async.h" />
+    <ClInclude Include="thread\base_thread.hpp" />
+    <ClInclude Include="timer\Timer.hpp" />
+    <ClInclude Include="type\base_type.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="apns_client.cpp" />
@@ -142,6 +160,13 @@
     <ClCompile Include="push_session.cpp" />
     <ClCompile Include="push_session_handler.cpp" />
     <ClCompile Include="session_manager.cpp" />
+    <ClCompile Include="socket\base_io_stream.cpp" />
+    <ClCompile Include="socket\epoll_io_loop.cpp" />
+    <ClCompile Include="socket\io_loop.cpp" />
+    <ClCompile Include="socket\ssl_client_async.cpp" />
+    <ClCompile Include="socket\tcp_client_async.cpp" />
+    <ClCompile Include="socket\tcp_server.cpp" />
+    <ClCompile Include="socket\tcp_session_async.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
