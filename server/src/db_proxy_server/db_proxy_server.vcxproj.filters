@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\business">
+      <UniqueIdentifier>{969d409b-3741-4e29-8d07-b42d638bcc55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\business">
+      <UniqueIdentifier>{e803146b-584c-4649-b8f7-1598a55c8925}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="async.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CachePool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DBPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HandlerMap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hiredis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyConn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyTask.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="read.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sds.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SyncCenter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="business\AudioModel.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\Common.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\DepartAction.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\DepartModel.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\ExterLogin.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\FileAction.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\FileModel.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\GroupAction.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\GroupMessageModel.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\GroupModel.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\InterLogin.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\Login.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\LoginStrategy.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\MessageContent.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\MessageCounter.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\MessageModel.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\RecentSession.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\RelationModel.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\SessionModel.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\UserAction.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+    <ClInclude Include="business\UserModel.h">
+      <Filter>头文件\business</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutoPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CachePool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="db_proxy_server.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DBPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HandlerMap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ProxyConn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ProxyTask.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SyncCenter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="business\AudioModel.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\DepartAction.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\DepartModel.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\ExterLogin.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\FileAction.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\FileModel.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\GroupAction.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\GroupMessageModel.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\GroupModel.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\InterLogin.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\Login.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\MessageContent.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\MessageCounter.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\MessageModel.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\RecentSession.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\RelationModel.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\SessionModel.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\UserAction.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+    <ClCompile Include="business\UserModel.cpp">
+      <Filter>源文件\business</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

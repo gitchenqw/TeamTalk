@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BF30F2AB-C594-4BC3-B9A2-5F7AD2D22744}</ProjectGuid>
+    <RootNamespace>db_proxy_server</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>./;../base;../base/pb/protocol;../base/jsoncpp/;../base/pb/</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="async.h" />
+    <ClInclude Include="AutoPool.h" />
+    <ClInclude Include="business\AudioModel.h" />
+    <ClInclude Include="business\Common.h" />
+    <ClInclude Include="business\DepartAction.h" />
+    <ClInclude Include="business\DepartModel.h" />
+    <ClInclude Include="business\ExterLogin.h" />
+    <ClInclude Include="business\FileAction.h" />
+    <ClInclude Include="business\FileModel.h" />
+    <ClInclude Include="business\GroupAction.h" />
+    <ClInclude Include="business\GroupMessageModel.h" />
+    <ClInclude Include="business\GroupModel.h" />
+    <ClInclude Include="business\InterLogin.h" />
+    <ClInclude Include="business\Login.h" />
+    <ClInclude Include="business\LoginStrategy.h" />
+    <ClInclude Include="business\MessageContent.h" />
+    <ClInclude Include="business\MessageCounter.h" />
+    <ClInclude Include="business\MessageModel.h" />
+    <ClInclude Include="business\RecentSession.h" />
+    <ClInclude Include="business\RelationModel.h" />
+    <ClInclude Include="business\SessionModel.h" />
+    <ClInclude Include="business\UserAction.h" />
+    <ClInclude Include="business\UserModel.h" />
+    <ClInclude Include="CachePool.h" />
+    <ClInclude Include="DBPool.h" />
+    <ClInclude Include="HandlerMap.h" />
+    <ClInclude Include="hiredis.h" />
+    <ClInclude Include="ProxyConn.h" />
+    <ClInclude Include="ProxyTask.h" />
+    <ClInclude Include="read.h" />
+    <ClInclude Include="sds.h" />
+    <ClInclude Include="SyncCenter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutoPool.cpp" />
+    <ClCompile Include="business\AudioModel.cpp" />
+    <ClCompile Include="business\DepartAction.cpp" />
+    <ClCompile Include="business\DepartModel.cpp" />
+    <ClCompile Include="business\ExterLogin.cpp" />
+    <ClCompile Include="business\FileAction.cpp" />
+    <ClCompile Include="business\FileModel.cpp" />
+    <ClCompile Include="business\GroupAction.cpp" />
+    <ClCompile Include="business\GroupMessageModel.cpp" />
+    <ClCompile Include="business\GroupModel.cpp" />
+    <ClCompile Include="business\InterLogin.cpp" />
+    <ClCompile Include="business\Login.cpp" />
+    <ClCompile Include="business\MessageContent.cpp" />
+    <ClCompile Include="business\MessageCounter.cpp" />
+    <ClCompile Include="business\MessageModel.cpp" />
+    <ClCompile Include="business\RecentSession.cpp" />
+    <ClCompile Include="business\RelationModel.cpp" />
+    <ClCompile Include="business\SessionModel.cpp" />
+    <ClCompile Include="business\UserAction.cpp" />
+    <ClCompile Include="business\UserModel.cpp" />
+    <ClCompile Include="CachePool.cpp" />
+    <ClCompile Include="DBPool.cpp" />
+    <ClCompile Include="db_proxy_server.cpp" />
+    <ClCompile Include="HandlerMap.cpp" />
+    <ClCompile Include="ProxyConn.cpp" />
+    <ClCompile Include="ProxyTask.cpp" />
+    <ClCompile Include="SyncCenter.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

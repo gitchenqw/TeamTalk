@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="apns_client.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apns_client_handler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apns_feedback_handler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="apns_msg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="byte_stream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigFileReader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="jsonxx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pdu_msg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="push_app.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="push_define.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="push_server.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="push_server_handler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="push_session.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="push_session_handler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="session_manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="apns_client.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apns_client_handler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apns_feedback_handler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="apns_msg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="byte_stream.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigFileReader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jsonxx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pdu_msg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="push_app.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="push_server.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="push_server_handler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="push_session.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="push_session_handler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="session_manager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
