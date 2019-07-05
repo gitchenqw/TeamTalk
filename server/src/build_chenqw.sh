@@ -180,27 +180,35 @@ build() {
 
     cp login_server/loginserver.conf ../$build_version/login_server/
     cp bin/login_server ../$build_version/login_server/
+    cp bin/daeml ../$build_version/login_server/
 
     cp bin/route_server ../$build_version/route_server/
     cp route_server/routeserver.conf ../$build_version/route_server/
+    cp bin/daeml ../$build_version/route_server/
 
     cp bin/msg_server ../$build_version/msg_server/
     cp msg_server/msgserver.conf ../$build_version/msg_server/
+    cp bin/daeml ../$build_version/msg_server/
 
     cp bin/http_msg_server ../$build_version/http_msg_server/
     cp http_msg_server/httpmsgserver.conf ../$build_version/http_msg_server/
+    cp bin/daeml ../$build_version/http_msg_server/
 
     cp bin/file_server ../$build_version/file_server/
     cp file_server/fileserver.conf ../$build_version/file_server/
+    cp bin/daeml ../$build_version/file_server/
 
     cp bin/push_server ../$build_version/push_server/
     cp push_server/pushserver.conf ../$build_version/push_server/
+    cp bin/daeml ../$build_version/push_server/
 
     cp bin/db_proxy_server ../$build_version/db_proxy_server/
     cp db_proxy_server/dbproxyserver.conf ../$build_version/db_proxy_server/
+    cp bin/daeml ../$build_version/db_proxy_server/
 
     cp bin/msfs ../$build_version/msfs/
     cp msfs/msfs.conf.example ../$build_version/msfs/
+    cp bin/daeml ../$build_version/msfs/
 
     cp slog/log4cxx.properties ../$build_version/lib/
     cp slog/libslog.so  ../$build_version/lib/
@@ -209,6 +217,7 @@ build() {
 
     cp bin/daeml ../$build_version/
     cp ../run/restart.sh ../$build_version/
+    cp ../run/tt.sh ../$build_version/
 
     cd ../
     tar zcvf    $build_name $build_version
