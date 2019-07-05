@@ -114,22 +114,49 @@ void Stop(int signo)
         _exit(0);
     }
 }
+
+// {add by chenqw
+void daemonize(void) {
+	int fd;
+
+	if (fork() != 0)
+	{
+		exit(0);
+	}
+
+	setsid();
+
+	if ((fd = open("/dev/null", O_RDWR, 0)) != -1)
+	{
+		dup2(fd, STDIN_FILENO);
+		dup2(fd, STDOUT_FILENO);
+		dup2(fd, STDERR_FILENO);
+		if (fd > STDERR_FILENO)
+		{
+			close(fd);
+		}
+	}
+}
+// }
+
 int main(int argc, char* argv[])
 {
-    for(int i=0; i < argc; ++i)
-       {
-           if(strncmp(argv[i], "-d", 2) == 0)
-           {
-               if(daemon(1, 0, 1) < 0)
-               {
-                   cout<<"daemon error"<<endl;
-                   return -1;
-               }
-               break;
-           }
-       }
+	// {delete by chenqw
+    //for(int i=0; i < argc; ++i)
+    //   {
+    //       if(strncmp(argv[i], "-d", 2) == 0)
+    //       {
+    //           if(daemon(1, 0, 1) < 0)
+    //           {
+    //               cout<<"daemon error"<<endl;
+    //               return -1;
+    //           }
+    //           break;
+    //       }
+    //   }
+	// }
     log("MsgServer max files can open: %d", getdtablesize());
-
+	
 
     char* listen_ip = config_file.GetConfigName("ListenIP");
     char* str_listen_port = config_file.GetConfigName("ListenPort");
@@ -144,6 +171,15 @@ int main(int argc, char* argv[])
         log("config file miss, exit...");
         return -1;
     }
+
+	// {add by chenqw for linux
+	if ((argc == 2) && (strcmp(argv[1], "-d") == 0))
+	{
+		signal(SIGINT, SIG_IGN);
+		signal(SIGQUIT, SIG_IGN);
+		daemonize();
+	}
+	// }
     
     log("%s,%s",listen_ip, str_listen_port);
     uint16_t listen_port = atoi(str_listen_port);

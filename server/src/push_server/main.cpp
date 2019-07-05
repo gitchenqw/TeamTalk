@@ -27,11 +27,44 @@ void writePid()
     fclose(f);
 }
 
+// {add by chenqw
+void daemonize(void) {
+	int fd;
+
+	if (fork() != 0)
+	{
+		exit(0);
+	}
+
+	setsid();
+
+	if ((fd = open("/dev/null", O_RDWR, 0)) != -1)
+	{
+		dup2(fd, STDIN_FILENO);
+		dup2(fd, STDOUT_FILENO);
+		dup2(fd, STDERR_FILENO);
+		if (fd > STDERR_FILENO)
+		{
+			close(fd);
+		}
+	}
+}
+// }
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("start push server...\n");
     signal(SIGPIPE, SIG_IGN);
+
+	// {add by chenqw for linux
+	if ((argc == 2) && (strcmp(argv[1], "-d") == 0))
+	{
+		signal(SIGINT, SIG_IGN);
+		signal(SIGQUIT, SIG_IGN);
+		daemonize();
+	}
+	// }
+
     CPushApp::GetInstance()->Init();
     CPushApp::GetInstance()->Start();
     writePid();

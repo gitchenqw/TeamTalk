@@ -58,6 +58,30 @@ void http_callback(void* callback_data, uint8_t msg, uint32_t handle, void* pPar
     }
 }
 
+// {add by chenqw
+void daemonize(void) {
+	int fd;
+
+	if (fork() != 0)
+	{
+		exit(0);
+	}
+
+	setsid();
+
+	if ((fd = open("/dev/null", O_RDWR, 0)) != -1)
+	{
+		dup2(fd, STDIN_FILENO);
+		dup2(fd, STDOUT_FILENO);
+		dup2(fd, STDERR_FILENO);
+		if (fd > STDERR_FILENO)
+		{
+			close(fd);
+		}		
+	}
+}
+// }
+
 /**
  *  login_server是TeamTalk的登录服务器，
  *  负责分配一个负载较小的MsgServer给客户端使用,服务端口号是8080
@@ -89,6 +113,15 @@ int main(int argc, char* argv[])
 		log("config item missing, exit... ");
 		return -1;
 	}
+
+	// {add by chenqw for linux
+	if ((argc == 2) && (strcmp(argv[1], "-d") == 0))
+	{
+		signal(SIGINT, SIG_IGN);
+		signal(SIGQUIT, SIG_IGN);
+		daemonize();
+	}
+	// }
 
 	uint16_t client_port = atoi(str_client_port);
 	uint16_t msg_server_port = atoi(str_msg_server_port);
