@@ -207,7 +207,7 @@ build() {
     cp bin/daeml ../$build_version/db_proxy_server/
 
     cp bin/msfs ../$build_version/msfs/
-    cp msfs/msfs.conf.example ../$build_version/msfs/
+    cp msfs/msfs.conf ../$build_version/msfs/
     cp bin/daeml ../$build_version/msfs/
 
     cp slog/log4cxx.properties ../$build_version/lib/
