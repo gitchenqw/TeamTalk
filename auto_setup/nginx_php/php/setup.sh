@@ -82,8 +82,16 @@ download() {
 
 # building php
 build_php() {
-	gunzip -c $PHP.tar.gz | tar xf -
+	# {delete by chenqw
+	#gunzip -c $PHP.tar.gz | tar xf -
+	# }
+	# {add by chenqw
+	tar xzf $PHP.tar.gz
+	# }
 	cd $PHP
+	# {add by chenqw
+	autoconf
+	# }
 	./configure --prefix=$INSTALL_DIR \
 		  --with-config-file-path=$INSTALL_DIR/etc \
 	    --enable-fpm \
