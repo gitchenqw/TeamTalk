@@ -202,6 +202,29 @@ bool CacheConn::mget(const vector<string>& keys, map<string, string>& ret_value)
 
 bool CacheConn::isExists(string &key)
 {
+	// {add by chenqw for 修改群组长时间不发消息,redis连接已经超时，但是客户端还未感知到的bug
+	redisReply *reply_ping = (redisReply*)redisCommand(m_pContext, "ping");
+	if (NULL != reply_ping)
+	{
+		if (REDIS_REPLY_STATUS != reply_ping->type || 0 != strcasecmp(reply_ping->str, "PONG"))
+		{
+			freeReplyObject(reply_ping);
+			return false;
+		}
+
+		freeReplyObject(reply_ping);
+	}
+	else
+	{
+		if (REDIS_ERR_EOF = m_pContext->err)
+		{
+			log("redisCommand('%s') failed: %d->%s", "ping", m_pContext->err, m_pContext->errstr);
+			redisFree(m_pContext);
+			m_pContext = NULL;
+		}
+	}
+	// }
+
     if (Init()) {
         return false;
     }
@@ -211,6 +234,9 @@ bool CacheConn::isExists(string &key)
     {
         log("redisCommand failed:%s", m_pContext->errstr);
         redisFree(m_pContext);
+		// {add by chenqw for fix bug
+		m_pContext = NULL;
+		// }
         return false;
     }
     long ret_value = reply->integer;
