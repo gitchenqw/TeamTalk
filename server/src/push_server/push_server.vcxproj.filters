@@ -200,5 +200,8 @@
     <ClCompile Include="socket\tcp_session_async.cpp">
       <Filter>源文件\socket</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

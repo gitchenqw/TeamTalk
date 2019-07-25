@@ -153,6 +153,7 @@
     <ClCompile Include="byte_stream.cpp" />
     <ClCompile Include="ConfigFileReader.cpp" />
     <ClCompile Include="jsonxx.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="pdu_msg.cpp" />
     <ClCompile Include="push_app.cpp" />
     <ClCompile Include="push_server.cpp" />
